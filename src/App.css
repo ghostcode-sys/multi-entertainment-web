@@ -1,38 +1,194 @@
-.App {
+*{
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+nav{
+  display: inline-block;
+  width: 100%;
+  background-color: purple;
+  position: sticky;
+  top:0;
+  z-index: 1;
+}
+.links{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  text-align: center
+}
+.anchors{
+  color:white;
+  width: 10%;
+  margin:1% 3%;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.anchors:hover{
+  color:yellow
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.news_head{
+  font-size: 72px;
+  background:linear-gradient(teal, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin:2% 0;
+  text-align: center;
 }
+.envelop{
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  border: 2px solid teal;
+  background-color: whitesmoke;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+
+}
+.card{
+  display: inline-block;
+  position: relative;
+  width: 30%;
+  min-width: 278px;
+  height: 58vh;
+  margin: 1% 0.5% ;
+  padding: 0.5%;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.card_content{
+  display: inline-block;
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card_bottom{
+  display: inline-block;
+  width: 100%;
+  height: 4vh;
+  background-color: rgba(240, 218, 240, 0.61);
+  border-top: 2px solid black;
+  padding-top:0.5%;
+}
+.article_card , .time_card{
+  white-space: nowrap;
+  color:rgb(7, 163, 54);
+  display: inline-block;
+  width: 60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.time_card{
+  width: 30%;
+  position: absolute;
+  right: 0;
+}
+.heart_card,.share_card,.info_card,.comment_card{
+  display: inline-block;
+  width:20%;
+  text-align:center;
+  margin: 2%;
+}
+.heart_card{
+  color:yellow;
+}
+.heart_card:hover{
+  color: deeppink;
 }
 
-.App-link {
-  color: #61dafb;
+/* notification  style */
+.nt {
+  display: block;
+  width: 100%;
+  height: 18vh;
+  position: relative;
+  color: rgb(10, 1, 1);
+  background-image: linear-gradient(to right, rgba(65, 105, 225, 0.274), rgba(0, 0, 0, 0.233));
+  border: 2px solid teal;
+  border-radius: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.nt_time {
+  text-align: center;
+  color: rgb(255, 72, 0);
+}
+
+.nt_title {
+  text-align: center;
+  font-weight: bold;
+}
+.nt_info{
+  display: flex;
+  width: 100%;
+  justify-items: center;
+  align-items: center;
+}
+.nt_icon{
+  width: 10%;
+  height: 11vh;
+}
+.nt_icon img{
+  width:80%;
+  height:10vh;
+}
+.nt_detail{
+  display:block;
+  width: 85%;
+  height: 10vh;
+  overflow: scroll;
+}::-webkit-scrollbar{
+  display: none;
   }
-  to {
-    transform: rotate(360deg);
-  }
+/* CHAT CSS*/
+.chatbox{
+  color:rgb(224, 204, 152);
+  background-image: linear-gradient(to right ,rgb(187, 62, 62),rgb(8, 96, 99));
+  display: inline-block;
+  width: 70%;
+  border: 2px solid brown;
+  border-radius: 10px;
+  padding:2% 2% 0 2%;
+}
+.chat_swipe{
+  display: none;
+  width: 90%;
+  background-image:linear-gradient(to left, rgba(255, 255, 0, 0.158),gray);
+  color:rgb(243, 214, 214);
+  border-radius: 10px;
+  padding:1% 2%;
+}
+.chat_del{
+  position:absolute;
+  top:0;
+  right:2%;
+  color:black;
+}
+.chat_del:hover{
+  color:chocolate
+}
+.chat_text{
+  margin-top: 1%;
+  margin-bottom: 1%;
+  color: cornsilk;
+}
+.send{
+  float: right;
+}
+.dT{
+  display: inline-block;
+}
+.chat_conf{
+  display: inline-table;
+  width: 100%;
+  background-image:linear-gradient(to left, rgba(255, 0, 255, 0.158),rgb(88, 96, 129));
+  color: rgb(5, 3, 0);
+}
+.chat_st{
+  display: block;
+  float: right;
 }
