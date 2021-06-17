@@ -3,6 +3,17 @@
   margin: 0;
   position: relative;
 }
+hr{
+  border: 2px solid maroon;
+}
+.fa-share-square{
+  color: royalblue;
+  font-size: 37px;
+}
+.sharebtn{
+  background-color: transparent;
+  border: none;
+}
 nav{
   display: inline-block;
   width: 100%;
@@ -23,13 +34,48 @@ a{
 }
 .anchors{
   color:white;
-  width: 10%;
+  width: 8%;
   margin:1% 3%;
   text-align: center;
 }
 .anchors:hover{
   color:yellow
 }
+.Menu{
+  position: absolute;
+  top:38px;
+  right: 0;
+  list-style: none;
+  z-index: 1;
+  background-color: teal;
+  width: 15%;
+  overflow-x: hidden;
+}
+.Menu li{
+  margin: 2%;
+}
+.Menu button{
+  background-color: transparent;
+  border: none;
+}
+.Menu button:hover{
+  color: white;
+  cursor: pointer;
+}
+
+.d-inline{
+  display: inline-block;
+  }
+.d-none{
+  display: none;
+  }
+  .Menuclick{
+    background-color: transparent;
+    border: none;
+    width: 10%;
+    margin:1% 3%;
+    text-align: center;
+  }
 .news_head{
   font-size: 72px;
   background:linear-gradient(teal, #333);
@@ -144,51 +190,86 @@ a{
 }::-webkit-scrollbar{
   display: none;
   }
-/* CHAT CSS*/
-.chatbox{
-  color:rgb(224, 204, 152);
-  background-image: linear-gradient(to right ,rgb(187, 62, 62),rgb(8, 96, 99));
-  display: inline-block;
-  width: 70%;
-  border: 2px solid brown;
-  border-radius: 10px;
-  padding:2% 2% 0 2%;
+/*chat css*/
+.mainbox{
+  height: 75vh;
 }
-.chat_swipe{
-  display: none;
-  width: 90%;
-  background-image:linear-gradient(to left, rgba(255, 255, 0, 0.158),gray);
-  color:rgb(243, 214, 214);
-  border-radius: 10px;
-  padding:1% 2%;
+img {
+  grid-area: imgs;
+  width: 50px;
+  height: auto;
 }
-.chat_del{
-  position:absolute;
-  top:0;
-  right:2%;
-  color:black;
+
+.user_name {
+  grid-area: name;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
 }
-.chat_del:hover{
-  color:chocolate
+
+.user_id {
+  grid-area: id;
+  text-align: right;
 }
-.chat_text{
-  margin-top: 1%;
-  margin-bottom: 1%;
-  color: cornsilk;
+
+.userinfo {
+  display: grid;
+  grid-template-areas: 'imgs name id';
+  gap: 10px;
+
 }
-.send{
-  float: right;
-}
-.dT{
-  display: inline-block;
-}
-.chat_conf{
-  display: inline-table;
-  width: 100%;
-  background-image:linear-gradient(to left, rgba(255, 0, 255, 0.158),rgb(88, 96, 129));
-  color: rgb(5, 3, 0);
-}
-.chat_st{
+
+.chatbox {
   display: block;
-  float: right;
+  width: 100%;
+  overflow-y: scroll;
 }
+
+.msgbox {
+  display: block;
+  width: 70%;
+  margin: 4px 0 4px 25%;
+  background-color: aquamarine;
+}
+.recieve{
+  margin: 4px 25% 4px 0;
+}
+
+.chat_swipe {
+  background-color: bisque;
+  border: dotted 2px grey;
+  border-radius: 10px;
+}
+
+.main_message {
+  border: 2px solid royalblue;
+  padding: 2px;
+}
+.msgcomp{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+
+}
+.msgup{
+  margin-bottom: 10px;
+  position: absolute;
+  display: block;
+  width: 100%;
+  bottom: 0;
+  background-color: skyblue;
+
+
+}
+#msgs{
+  width: 70%;
+  height: 20%;
+  overflow-y: scroll;
+  min-height: 50px;
+  color: seashell;
+  background-color: rgb(49, 212, 163);
+  resize: none;
+  font-size: 16px;
+}::-webkit-scrollbar{
+display: none;}

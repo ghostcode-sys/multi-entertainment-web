@@ -1,17 +1,24 @@
 import React from "react";
+import { Route, Switch } from "react-router-dom"
 import '../App.css';
 import ChatHead from "./ChatHead";
 import Header from "./Header"
 import NewsComp from "./NewsComp";
 import NotiHead from "./NotiHead"
+import VideoComp from "./VideoComp";
+import Group from "./Group";
 
 function App() {
   return (
     <div>
       <Header />
-      <NewsComp />
-      <NotiHead/>
-      <ChatHead />
+      <Switch>
+        <Route exact path="/"><NewsComp /></Route>
+        <Route path="/Notification"><NotiHead /> </Route>
+        <Route path="/Chat"><ChatHead /></Route>
+        <Route path="/Video"><VideoComp /></Route>
+        <Route path="/Group"><Group/></Route>
+      </Switch>
     </div>
   );
 }

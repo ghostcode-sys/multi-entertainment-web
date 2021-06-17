@@ -16,8 +16,10 @@ function NewsCard() {
             .then(function (response) {
                 response.json().then((data) => {
                     const dnews = data.articles.map((art,index) => {
+                        console.log(art.url)
                         return (
                             <div className="card" key = {index}>
+                                <a href={art.url} target="_blank"  rel="noreferrer">
 
                                 <div className="card_content">
                                     <img src={art.urlToImage} alt="" style={{ width: "100%", height: "33%" }} />
@@ -36,6 +38,7 @@ function NewsCard() {
                                     <span className="info_card"><i className="fas fa-info-circle"></i></span>
                                     <span className="info_card"><i className="fas fa-keyboard"></i></span>
                                 </div></div>
+                        </a>
                             </div>
                         )
                     })
