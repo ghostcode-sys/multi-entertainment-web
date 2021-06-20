@@ -3,6 +3,10 @@
   margin: 0;
   position: relative;
 }
+a{
+  text-decoration: none;
+  color: none;
+}
 hr{
   border: 2px solid maroon;
 }
@@ -101,10 +105,11 @@ a{
   width: 30%;
   min-width: 278px;
   height: 58vh;
-  margin: 1% 0.5% ;
+  margin: 2% 0.5% ;
   padding: 0.5%;
   border: 1px solid black;
   border-radius: 10px;
+  box-shadow: 5px 5px 5px 5px teal;
 }
 .card_content{
   display: inline-block;
@@ -273,3 +278,62 @@ img {
   font-size: 16px;
 }::-webkit-scrollbar{
 display: none;}
+
+/* form */
+.container_form {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  background-image: linear-gradient(to right, rgb(248, 228, 228) 50%, rgb(201, 238, 243) 50%);
+}
+
+.box_form {
+  margin: auto;
+  width: 80%;
+  background-color: snow;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+}
+
+.container_form h1 {
+  color: teal;
+  text-align: center;
+  grid-area: sh;
+
+}
+
+.box_form form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.box_form form input {
+  margin: 6%;
+  border: none;
+  border-bottom: 2px solid teal;
+  font-size: 21px;
+}
+
+.box_form form button {
+  padding: 0px;
+  border: none;
+  background-color: transparent;
+}
+.box_form form button img {
+  width: 50px;
+}
+
+.box_form img {
+  width:auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+}

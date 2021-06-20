@@ -5,7 +5,7 @@ function VideoCard() {
         <div className="card" >
 
         <div className="card_content">
-        <video width="320" height="240" controls autoplay muted>
+        <video width="320" height="240" controls autoPlay muted>
         <source src="movie.mp4" type="video/mp4"/> 
         <source src="movie.ogg" type="video/ogg"/>
       Your browser does not support the video tag.

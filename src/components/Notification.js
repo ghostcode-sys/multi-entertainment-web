@@ -1,6 +1,5 @@
 import React from 'react'
 import user from "../images/user.png"
-
 const Notification = () => {
     return (
         <div className="nt">

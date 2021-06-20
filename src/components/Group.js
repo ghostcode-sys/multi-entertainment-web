@@ -3,7 +3,7 @@ import React from 'react'
 function Group() {
     return (
         <div>
-            <h1 className="news_head">Give me some good idea that goes here with project</h1>
+            <h1 className="news_head">I future here i provide a multiplayer 2d game</h1>
         </div>
     )
 }

@@ -15,31 +15,31 @@ function NewsCard() {
         fetch(req)
             .then(function (response) {
                 response.json().then((data) => {
-                    const dnews = data.articles.map((art,index) => {
-                        console.log(art.url)
+                    const dnews = data.articles.map((art, index) => {
+                        console.log(art.author)
                         return (
-                            <div className="card" key = {index}>
-                                <a href={art.url} target="_blank"  rel="noreferrer">
+                            <div className="card" key={index}>
 
-                                <div className="card_content">
-                                    <img src={art.urlToImage} alt="" style={{ width: "100%", height: "33%" }} />
-                                    <h3>{art.title}</h3>
-                                    <br />
-                                    <p>{art.description}</p>
-                                </div>
-                                <div className="card_bottom">
-                                    <div>
-                                    <span className="article_card">{art.author}</span>
-                                    <span className="time_card">{art.publishedAt}</span>
+                                    <div className="card_content">
+                                        <img src={art.urlToImage} alt="" style={{ width: "100%", height: "33%" }} />
+                                        <h3>{art.title}</h3>
+                                        <br />
+                                        <p>{art.content}</p>
+                                        <a href={art.url} target="_blank" rel="noreferrer">Read more about this article</a>
                                     </div>
+                                <div className="card_bottom">
+                                        <div>
+                                            <span className="article_card">{art.author}</span>
+                                            <span className="time_card">{art.publishedAt}</span>
+                                        </div>
                                     <div>
-                                    <span className="heart_card" ><i className="fas fa-heart"></i></span>
-                                    <span className="share_card"><i className="fas fa-share-alt" style={{ color: "deepskyblue" }}></i></span>
-                                    <span className="info_card"><i className="fas fa-info-circle"></i></span>
-                                    <span className="info_card"><i className="fas fa-keyboard"></i></span>
-                                </div></div>
-                        </a>
-                            </div>
+                                        <span className="heart_card" ><i className="fas fa-heart"></i></span>
+                                        <span className="share_card"><i className="fas fa-share-alt" style={{ color: "deepskyblue" }}></i></span>
+                                        <span className="info_card"><i className="fas fa-info-circle"></i></span>
+                                        <span className="info_card"><i className="fas fa-keyboard"></i></span>
+                                    </div>
+                                </div>
+                            </div >
                         )
                     })
                     setnews(dnews)

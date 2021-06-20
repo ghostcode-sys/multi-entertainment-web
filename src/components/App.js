@@ -7,6 +7,9 @@ import NewsComp from "./NewsComp";
 import NotiHead from "./NotiHead"
 import VideoComp from "./VideoComp";
 import Group from "./Group";
+import Signup from "./Signup";
+import Login from "./Login";
+import Dashboard from "./Dashboard";
 
 function App() {
   return (
@@ -18,6 +21,9 @@ function App() {
         <Route path="/Chat"><ChatHead /></Route>
         <Route path="/Video"><VideoComp /></Route>
         <Route path="/Group"><Group/></Route>
+        <Route path="/Signup"><Signup /></Route>
+        <Route path="/Login"><Login /></Route>
+        <Route path="/Dashboard"><Dashboard /></Route>
       </Switch>
     </div>
   );
